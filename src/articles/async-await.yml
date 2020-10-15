@@ -1,0 +1,101 @@
+meta:
+  title: "What is async/await in Javascript? Let's explain!"
+  shortTitle: "async/await"
+
+blocks:
+  - type: link
+    caption: "We've already talked about Promises in a previous thread. Read it if you haven't already. This thread will be a continuation of that thread so please see that first:"
+    slug: "promises"
+
+  - type: text
+    content: "So as we mentioned before, Promises are a way of telling Javascript, \"go fetch some data but I'm not going to sit and wait because my browser would freeze. When you DO get a response eventually, do THIS with the data\"."
+
+  - type: text
+    content: "It would look something like this:"
+
+  - type: code
+    src: "async-js-getdata.js"
+
+  - type: text
+    content:
+      - "Basically:"
+      - "- request the data"
+      - "- *when the data is received* print them to the console"
+
+  - type: text
+    content:
+      - "Now imagine this scenario:"
+      - "- You need to make an API call to get user details"
+      - "- You then need to extract the User ID from the details"
+      - "- Then you need to make another API call to get user records using the User ID you got from the first API call"
+
+  - type: text
+    content: "You will need to call a Promise within a Promise. Example:"
+
+  - type: code
+    src: "async-nested-promises.js"
+
+  - type: text
+    content: "You can see how this can become messy. What if you need to do 3 API calls? Or 4? Or more? It will become a nightmare to maintain! Take a look at this:"
+
+  - type: code
+    src: "async-nested-promises-2.js"
+
+  - type: text
+    content:
+      - "Is there a better way to do this? A cleaner, less messy way that doesn't involve nesting promises within promises within promises?"
+      - "Yes there is. 👍"
+      - "Enter: async / await!"
+
+  - type: text
+    content: "async/await is a way to tell the browser, \"please sit and wait for data to return before proceeding to the next line (like how other programming languages do it), BUT DO NOT WORRY! I will STILL return a Promise at the end of all this so you won't freeze!\""
+
+  - type: text
+    content: "How do we use this? First we want to make a commitment that this whole thing will return a Promise. This is what \"async\" does. It declares a function as \"asynchronous\", basically meaning that it will return a Promise."
+
+  - type: text
+    content: "This is how it's done:"
+
+  - type: code
+    src: "async-empty-async.js"
+
+  - type: text
+    content: "No matter what you return here, it will be returned as a Promise."
+
+  - type: text
+    content: "Now we can tell this function, \"whenever you request data, sit and wait for a response before proceeding to the next line\". And we do this with the \"await\" keyword. Example:"
+
+  - type: code
+    src: "async-stuff-with-data.js"
+
+  - type: text
+    content:
+      - "What the code above does:"
+      - "It prints \"Getting user details...\" in the console"
+      - "- Requests some data and *awaits* for them to be returned"
+      - "- Saves the response in the userDetails variable"
+      - "- Once this is done, it returns the userDetails"
+
+  - type: text
+    content: "But, I hear you ask, didn't we say that sitting and waiting for data to be received will freeze my browser? What's going on here?"
+
+  - type: text
+    content: "In this case, NO! Why? Because we used \"async\" at the beginning of our function, the function can only return a Promise at the end. That means your browser is safe from freezing! 🙌"
+
+  - type: code
+    src: "async-stuffwithdata.js"
+
+  - type: text
+    content: "Because this function returns a Promise, you'll need to call it the usual way:"
+
+  - type: code
+    src: "async-call-stuffwithdata.js"
+
+  - type: text
+    content: "And this is what makes async/await so great and so friendly to both the browser, the user and the developer!"
+
+  - type: text
+    content: 
+      - "Happy browser"
+      - "Happy user"
+      - "Happy developer!"

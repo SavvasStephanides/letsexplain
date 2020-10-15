@@ -1,0 +1,45 @@
+.article-list{
+    h1{
+        padding: 29px;
+    }
+    .article{
+        a{
+            display: block;
+            padding: 15px;
+            font-size: 21px;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            margin: 9px;
+            border: 1px solid #3fc1c9;
+            line-height: 1.5;
+
+            &:hover{
+                box-shadow: 0 0 9px #3fc1c9;
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 600px){
+        ul{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            list-style: none;
+        }
+        
+    }
+
+    @media screen and (min-width: 900px){
+        h1{
+            width: 900px;
+            margin: auto;
+        }
+        ul{
+            grid-template-columns: repeat(3, 1fr);
+            list-style: none;
+            width: 900px;
+            margin: auto;
+        }
+    }
+}
