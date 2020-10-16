@@ -1,8 +1,8 @@
 import React from "react"
+import "../styles/article-list.scss"
 
-export default function ArticleList({title, articles}){
+export default function ArticleList({articles}){
     return <div className="article-list">
-    <h1>{title}</h1>
     <ul>
     {
         articles.map((article) =>
