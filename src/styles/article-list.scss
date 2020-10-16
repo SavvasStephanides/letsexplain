@@ -5,14 +5,12 @@
     .article{
         a{
             display: block;
-            padding: 15px;
+            padding: 21px 15px;
             font-size: 21px;
             text-decoration: none;
             color: black;
             background-color: white;
-            margin: 9px;
-            border: 1px solid #3fc1c9;
-            line-height: 1.5;
+            border-bottom: 3px solid #3fc1c9;
 
             &:hover{
                 box-shadow: 0 0 9px #3fc1c9;
@@ -25,6 +23,7 @@
         ul{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-gap: 9px;
             list-style: none;
         }
         
