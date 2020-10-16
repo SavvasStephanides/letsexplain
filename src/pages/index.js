@@ -12,7 +12,6 @@ export default function Home({data}) {
       <title>Let's explain!</title>
     </Helmet>
     <div id="home-container">
-          <div className="container-width dev-intro">A project by <a href="https://savvasstephanides.github.io" target="_blank" rel="noreferrer">Savvas Stephanides</a></div>
           <h1>All threads</h1>
           <ArticleList title="All threads" articles={articles}/>
     </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import "../styles/header.scss"
+import "../styles/footer.scss"
 
 export default function Layout({ children }) {
     return (
@@ -16,6 +17,13 @@ export default function Layout({ children }) {
         <div id="main-page">
             {children}
         </div>
+        <footer>
+          <div className="content container-width">
+            <div className="dev-intro">
+              A project by Savvas Stephanides. <a href="https://twitter.com/SavvasStephnds">Follow him on Twitter</a>
+            </div>
+          </div>
+        </footer>
       </div>
     )
   }
