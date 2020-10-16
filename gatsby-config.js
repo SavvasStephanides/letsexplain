@@ -8,6 +8,12 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-180711421-1`
+      }
+    }
   ],
 }
