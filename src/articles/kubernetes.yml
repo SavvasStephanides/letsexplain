@@ -1,0 +1,60 @@
+meta:
+  title: "What is Kubernetes? Let's explain!"
+  shortTitle: "Kubernetes"
+
+blocks:
+  - type: link
+    caption: "In a previous thread, we talked about Docker and how you can load all your libraries and tools into little boxes called containers. See that thread before proceeding"
+    slug: "docker"
+
+  - type: text
+    content: "So to continue our story, let’s say your friend suggests you post your to-do app online. As a normal website."
+
+  - type: text
+    content: "You think this is a great idea. So you go ahead and by the end of the day your app is available for the whole world"
+
+  - type: text
+    content: "Since your app is already in containers, you can simply move that container online, on a server"
+
+  - type: text
+    content: 
+      - "Upon further reading however, you discover that it’s common practice to have lots of small containers instead of one large one, to make it easier to maintain:"
+      - "- One container for your database"
+      - "- One container for your backend"
+      - "- One container for your front end"
+
+  - type: text
+    content: "So you go ahead and split your smaller Docker containers, one for MySQL, one for the Python backend, and one for your React front end. Finally your to-do app is online. Now anyone can log in and organise their day! Brilliant!"
+
+  - type: text
+    content: "After a couple of days, you notice that quite a few people use your app. In fact, over a thousand accounts have been created. That's crazy! But it's fine right? What could go wrong?"
+
+  - type: text
+    content: "One week later, you get a late night call from your friend. Breathing deeply he's shouting \"YOUR WEBSITE ISN'T WORKING! WHAT IS GOING ON?\". You do a quick check and realise that the Python backend went down! So your front end has no way to communicate with the database!"
+
+  - type: text
+    content: "You nervously log in to your server, type in a few commands, and after a few minutes, your app is up and running again. No harm caused... except for 407 angry emails from customers and at least 300 of them have cancelled their account because your app is unreliable."
+
+  - type: text
+    content: "This is quite common for web apps that are widely available online. If many people use your website, it will go down because the traffic is too much."
+
+  - type: text
+    content: "What if there was something that could continuously watch if anything goes wrong and fix it for you, so you don't have to jump from your seat every time something goes wrong and start rushingly typing commands to get it back up again?"
+
+  - type: text
+    content: "Enter Kubernetes!"
+
+  - type: text
+    content: "Kubernetes is a cool tool that works alongside Docker to make sure your containers behave."
+
+  - type: text
+    content: "It sort of acts like everything works correctly, like an orchestra. Which is why you'll often hear it being called an \"orchestration framework\"."
+
+  - type: text
+    content: "It is designed to give you peace of mind when putting Docker containers online. You can rest assured that your app works as it should, always."
+
+  - type: text
+    content: "Kubernetes keeps an eye on your containers, and whenever something goes wrong, for example a container goes switches off, it will create a new one and toss the older one."
+
+  - type: text
+    content: "Obviously we barely scratched the surface of what Kubernetes can do. Read more about it from their official documentation: https://kubernetes.io/docs/home/"
