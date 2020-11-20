@@ -1,0 +1,124 @@
+meta:
+  title: "What is React? Let's explain!"
+  shortTitle: "React"
+
+blocks:
+  - type: text
+    content: "React is a framework that makes it easier to create complex web pages. How does it do that?"
+
+  - type: text
+    content: "Imagine you're developing a to-do app. Let's say you just need to display 4-5 tasks. Ignore functionality like adding, or marking tasks as complete."
+
+  - type: text
+    content: "If we were to just write some static HTML, the code would look something like this:"
+
+  - type: code
+    src: react-code1.html
+
+  - type: text
+    content: 
+      - "The tasks are included as part of an unordered list, or <ul>"
+      - "Each list item &lt;li&gt; contains the title of the task, the date it has been added and the the deadline. So you can see that each item is slightly complex."
+
+  - type: text
+    content: "Obviously, in real life, to-do lists aren't just hard-coded HTML. You will need to get the data from somewhere, like an array of JSON objects. Like this:"
+
+  - type: code
+    src: react-code2.js
+
+  - type: text
+    content:
+      - "We would then have to use Javascript in order to display the to-do items in exactly the same format as above."
+      - "The Javascript would look something like this:"
+
+  - type: code
+    src: react-code3.js
+
+  - type: text
+    content: "We can all agree that this looks ugly and nasty. Not what you had in mind when you needed some dynamic data for your website. And it gets worse with more complex pages."
+
+  - type: text
+    content:
+      - "What if we could build complex dynamic user interfaces, but instead of spaghetti JS, we used something close to HTML?"
+      - "Enter ⚛ React!"
+
+  - type: text
+    content: "React, as mentioned in its own documentation is \"a JavaScript library for building user interfaces\". And it's an accurate statement. It makes it a lot easier to create complex user interfaces."
+
+  - type: text
+    content: "But how does it work? How can React make our ugly code above into something clearer and more comprehensive?"
+
+  - type: text
+    content: "In React we can do this:"
+
+  - type: code
+    src: react-code4.jsx
+
+  - type: text
+    content:
+      - "\"Hang on a minute\", I hear you say. \"Did we just... write simple HTML within Javascript? And then added additional Javascript ONLY when we need it?\""
+      - "Well, yes we did!"
+
+  - type: text
+    content:
+      - "We defined a Javascript function and in that, we just wrote some HTML. And when we needed some more complex functionality, like looping through our to-do list, we just embedded some simple Javascript."
+      - "Incredible isn't it?"
+      - "That's the power of React!"
+
+  - type: text
+    content: "This is how React makes developing complex user interfaces so simple. But that's not all..."
+
+  - type: text
+    content: 
+      - "React also enables you to tidy up your code. How?"
+      - "It enables you to break down your page's code into smaller, more manageable chunks!"
+
+  - type: text
+    content: "Let's say now you're building a portfolio website. You need to include a header, a list of your skills, and a list for your projects. In React, it would look something this:"
+
+  - type: code
+    src: react-code5.jsx
+
+  - type: text
+    content:
+      - "In React, you can store each of these sections in their own file."
+      - "For example, the skills section can be its own file, and it would look like this:"
+
+  - type: code
+    src: react-code6.jsx
+
+  - type: text
+    content: "If all of our sections have their own files, we can then import them into our website like this:"
+
+  - type: code
+    src: react-code7.jsx
+
+  - type: text
+    content:
+      - "Look how clean our code has become!"
+      - "Each of these sections in their own files is what in React, we call \"components\""
+      - "And even greater, is that we can also separate our CSS, making it much more manageable!"
+
+  - type: text
+    content: "So how do you get started? First, you need NodeJS, which you can download here: https://nodejs.org/"
+
+  - type: text
+    content: "Next, you need a package called \"create-react-app\" which you can get with this command:"
+
+  - type: code
+    src: react-create-react-app.sh
+
+  - type: text
+    content: "Finally, you can create your first React app with this command:"
+
+  - type: code
+    src: react-cra-my-app.sh
+
+  - type: text
+    content: "Now point your terminal inside your app see how your app looks:"
+
+  - type: code
+    src: react-npm-start.sh
+
+  - type: text
+    content: "That's it! Now that you have a basic knowledge of React, you can explore the official docs! Have fun! https://reactjs.org/docs/getting-started.html"

@@ -5,8 +5,10 @@ exports.sourceNodes = async({ actions, createNodeId, createContentDigest })=>{
     var articleFiles = fs.readdirSync("./src/articles")
 
     articleFiles.forEach((file)=>{
+        console.log(file)
         const content = fs.readFileSync(`./src/articles/${file}`, 'utf8')
-        var yaml = YAML.parse(content)
+        
+        yaml = YAML.parse(content)
         
         var html = getArticleHtmlFromYaml(yaml)
 
@@ -22,6 +24,7 @@ exports.sourceNodes = async({ actions, createNodeId, createContentDigest })=>{
             },
         }
         actions.createNode(node)
+        console.log("Done!")
     })
 }
 
@@ -54,6 +57,7 @@ function getArticleHtmlFromYaml(yaml){
     html += `<h1 class="article-block">${yaml.meta.title}</h1>`
     yaml.blocks.forEach((block) => {
         if(block.type === "text"){
+            
             var content = block.content
 
             if(Array.isArray(content)){
@@ -67,7 +71,7 @@ function getArticleHtmlFromYaml(yaml){
 
         else if(block.type === "code"){
             var codeBlock = fs.readFileSync("./src/code-blocks/" + block.src, "utf-8")
-            html += `<pre class="article-block"><code>${codeBlock}</code></pre>`
+            html += `<pre class="article-block"><code>${codeBlock.replace(/</g, "&lt;")}</code></pre>`
         }
 
         else if(block.type === "link"){
@@ -76,9 +80,11 @@ function getArticleHtmlFromYaml(yaml){
 
             html += `<div class="article-block">
                 <div>${block.caption}</div>
-                <a href="${block.slug}" class="article-link">${linkedArticle.meta.title}</a>
+                <a href="/${block.slug}" class="article-link">${linkedArticle.meta.title}</a>
             </div>`
         }
+
+        
             
     })
     html += "</article>"
