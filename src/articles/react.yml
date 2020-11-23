@@ -17,7 +17,7 @@ blocks:
 
   - type: text
     content: 
-      - "The tasks are included as part of an unordered list, or <ul>"
+      - "The tasks are included as part of an unordered list, or &lt;ul>"
       - "Each list item &lt;li&gt; contains the title of the task, the date it has been added and the the deadline. So you can see that each item is slightly complex."
 
   - type: text
