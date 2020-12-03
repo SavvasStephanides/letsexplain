@@ -1,0 +1,110 @@
+meta:
+  title: "What is TypeScript? Let's explain!"
+  shortTitle: "TypeScript"
+
+blocks:
+  - type: text
+    content: "Take a look at this Javascript code:"
+
+  - type: code
+    src: ts-01.js
+
+  - type: text
+    content:
+      - "What is the output of the code?"
+      - "If your answer is 15 then you're right! You have two numbers, `number1` and `number2`. If you add them together using the `+` sign, it will give you the total because they're both numbers!"
+
+  - type: text
+    content: "Now take a look at this:"
+
+  - type: code
+    src: ts-02.js
+
+  - type: text
+    content: 
+      - "This time `number1` and `number2` are strings. So what will this code give as output?"
+      - "If your answer is `510` but as a string, then you're right again!"
+
+  - type: text
+    content:
+      - "But that's not how you expect it to work."
+      - "I want `number1`, `number2`, and `sum` to all be numbers so that `sum` gives me the sum every time."
+
+  - type: text
+    content: "Wouldn't it be nice if we could put some rules in so that we're absolutely CERTAIN that `number1`, `number2` and `sum` are ALWAYS numbers?"
+
+  - type: text
+    content: 
+      - "Let's look at another example:"
+      - "Suppose, this time, we want to divide two numbers together:"
+
+  - type: code
+    src: ts-03.js
+
+  - type: text
+    content: "The result of the above is (as you'd expect), 5. But what if instead of a number, `number2` is a string, or an array?"
+
+  - type: code
+    src: ts-04.js
+
+  - type: text
+    content:
+      - "What would you expect it to happen here?"
+      - "If your answer is \"it would give me an error\" then you'd be wrong. The result would be \"Infinity\". But that is non-sense!"
+      - "There should be some rules in place that say \"you can only divide numbers with numbers\". Wouldn't that be nice?"
+
+  - type: text
+    content: 
+      - "Enter TypeScript!"
+      - "TypeScript is a language that is basically extended Javascript"
+      - "In essence, TypeScript allows you to write Javascript so that when you declare variables or functions, you can also specify what TYPE each of them are (string, number, array etc)."
+
+  - type: text
+    content: 
+      - "For example:"
+      - "I want to create a variable total which is a number:"
+
+  - type: code
+    src: ts-05.ts
+
+  - type: text
+    content: "\"I want to create a variable `name` which is a string\":"
+
+  - type: code
+    src: ts-06.ts
+
+  - type: text
+    content: "\"I want to create a function `getTotal` which should always return a number\":"
+
+  - type: code
+    src: ts-07.ts
+
+  - type: text
+    content: "So what would happen if I write a string in the total variable in my TypeScript (.ts) file, since it expects a number? This:"
+
+  - type: image
+    src: /assets/ts-01.png
+    caption: "TypeScript showing an error within Visual Studio Code"
+
+  - type: text
+    content:
+      - "This is what's so amazing about TypeScript. It tells you that what you're assigning is wrong before you even hit save! That means this error never makes it to your users, and it makes fixing errors a lot LOT easier!"
+      - "So how do I get started?"
+
+  - type: text
+    content: "You can install TypeScript using via NPM:"
+
+  - type: code
+    src: ts-08.sh
+
+  - type: text
+    content: "You can then turn a TypeScript (.ts) file into a Javascript (.js) file by running this command. You can then attach your JS file to your HTML as normal!"
+
+  - type: code
+    src: ts-09.sh
+
+  - type: text
+    content:
+      - "This thread only touches the absolute basics of TypeScript but you can learn a lot more on the TypeScript official documentation which is quite comprehensive!"
+      - "https://www.typescriptlang.org/docs"
+      - "Enjoy!"
