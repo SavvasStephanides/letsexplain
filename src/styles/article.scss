@@ -20,12 +20,14 @@ article{
             background-color: #fc5185;
         }
 
-        &:before{          
-            width: 30px;
-            height: 30px;
-            left: 12px;
-            top: 27px;
-            border-radius: 100%;
+        &:not(pre){
+            &:before{          
+                width: 30px;
+                height: 30px;
+                left: 12px;
+                top: 27px;
+                border-radius: 100%;
+            }
         }
         &:after{
             content: '';
